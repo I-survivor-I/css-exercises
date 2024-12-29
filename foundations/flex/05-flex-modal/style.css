@@ -15,11 +15,33 @@ body {
   justify-content: center;
 }
 
+.first-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.warning {
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;
+  gap: 18px;
+}
+
+.second-row {
+  margin-left: 12.5%;
+  margin-bottom: 16px;
+}
+
+.third-row {
+  margin-left: 12.5%;
+}
+
 .modal {
   background: white;
   width: 480px;
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  padding: 18px;
 }
 
 .icon {
