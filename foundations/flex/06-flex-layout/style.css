@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 body {
-  height: 100vh;
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the wrapper spans the entire viewport */
+  margin: 0; /* Removes default body margins */
   overflow: hidden;
-  font-family: Roboto, sans-serif;
+  font-family: Roboto, sans-serif; 
 }
 
 img {
@@ -23,4 +25,53 @@ input {
   border-radius: 16px;
   padding: 8px 24px;
   width: 400px;
+}
+
+/* Apply flexbox to header and footer to align and space items */
+.header, .footer {
+  display: flex;
+  justify-content: space-between; /* Align left and right links */
+  align-items: center; /* Vertically center content */
+  padding: 8px 16px;
+  
+}
+
+/* Content should be centered vertically and horizontally */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
+  flex-grow: 1; /* Ensures the content expands to fill the space between header and footer */
+}
+
+/* Remove default list styling and space items in header and footer */
+.header ul, .footer ul {
+  display: flex;
+  gap: 16px;
+  list-style-type: none; /* Removes bullets from the list */
+  padding: 0;
+  margin: 0;
+}
+
+/* Style for links inside header and footer */
+.header ul a, .footer ul a {
+  text-decoration: none; 
+  color: gray;
+}
+
+/* Footer background color */
+.footer {
+  background-color: #eeeeee; /* background color */
+}
+
+/* Buttons inside .content section */
+.buttons button {
+  padding: 4px 16px;
+  margin-top: 18px;
+}
+
+/* Image styling within content */
+.content img {
+  margin-bottom: 20px;
 }
